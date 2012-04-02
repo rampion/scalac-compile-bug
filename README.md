@@ -28,7 +28,6 @@ To see the bug for yourself, run the bug script:
     && scalac-2.9 src/main/scala/pack/age/Foo.scala src/main/scala/pack/age/Bar.scala
 ```
 
-This inconsitency upon recompilation
 Since Foo.scala just defines a custom data type and an implicit, 
 
 ```scala
