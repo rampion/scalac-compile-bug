@@ -1,6 +1,21 @@
 #!/usr/bin/env bash
 
-	 echo "initialize" \
+# This script just demonstrates the bug.  When run on my system
+# (OSX 10.6.8, using scalac-2.9.1.final) it produces the following output:
+#
+#   % bug
+#   initialize
+#   compile once (succeeds)
+#   compile again (fails)
+#   src/main/scala/pack/age/Bar.scala:6: error: type mismatch;
+#    found   : Int(1)
+#    required: pack.age.Baz
+#     def baz : Baz   = 1
+#                       ^
+#   one error found
+#   %
+
+   echo "initialize" \
 && rm -rf pack \
 && echo "compile once (succeeds)" \
 && scalac-2.9 src/main/scala/pack/age/Foo.scala src/main/scala/pack/age/Bar.scala \
