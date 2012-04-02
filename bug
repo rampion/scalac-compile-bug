@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+compile=\
+	scalac-2.9 \
+	-classpath target/classes \
+	-d target/classes \
+	src/main/scala/pack/age/Foo.scala \
+	src/main/scala/pack/age/Bar.scala
+
+		echo "initialize"
+		rm -rf target/classes \
+&&	mkdir -p target/classes \
+&&	echo "compile once" \
+&&	$compile \
+&&	echo "compile again" \
+&&	$compile
+
