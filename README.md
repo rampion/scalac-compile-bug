@@ -52,4 +52,4 @@ and Bar.scala just uses this implicit to define a method
     }
 ```
 
-I'm guessing this has to do with how `scalac` finds `implicit`s at cwmpile-time.
+I'm guessing this has to do with how `scalac` finds `implicit`s at compile-time.
